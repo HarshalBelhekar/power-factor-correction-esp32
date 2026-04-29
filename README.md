@@ -18,8 +18,7 @@ ESP32 | Embedded C | PZEM004T | Blynk | Relay Control
 
 ## Note
 
-This repository contains a simplified firmware version.
-Full implementation available on request.
+Full implementation includes IoT monitoring (Blynk), LCD display, and advanced control logic which are not included in this public version.
 
 ## Author
 
