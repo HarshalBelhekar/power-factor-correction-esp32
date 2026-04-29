@@ -1,0 +1,28 @@
+# Working Principle
+
+The system continuously monitors electrical parameters using the PZEM004T sensor. The ESP32 processes these values to calculate real-time power factor.
+
+* If power factor is within acceptable range → no action taken
+* If power factor drops below threshold → capacitor banks are activated
+
+The system dynamically switches capacitors using relays:
+
+* 6µF, 10µF, and 15µF capacitors are combined to provide required reactive compensation
+
+After switching:
+
+* System waits for stabilization
+* Re-evaluates power factor
+* Adjusts capacitor combination if required
+
+Additional logic:
+
+* No-load condition → power factor forced to 1.00
+* Avoids unnecessary switching
+
+All parameters are:
+
+* Displayed on LCD
+* Sent to Blynk cloud for remote monitoring
+
+This ensures automatic, real-time, and efficient power factor correction.
